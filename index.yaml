@@ -91,4 +91,22 @@ entries:
     urls:
     - https://github.com/Kartikey-star/development/releases/download/redhat-mysql-sed-0.1.7/redhat-mysql-sed-0.1.7.tgz
     version: 0.1.7
-generated: '2022-10-28T05:11:35.596824+00:00'
+  - annotations:
+      charts.openshift.io/digest: sha256:1e0affeb58d642f16a7b89bae1e280109738224f7850d0f7612ef5df07b57fc3
+      charts.openshift.io/lastCertifiedTimestamp: '2022-10-28T05:22:24.62213+00:00'
+      charts.openshift.io/provider: Red Hat
+      charts.openshift.io/providerType: redhat
+      charts.openshift.io/submissionTimestamp: '2022-10-28T05:24:41.428488+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
+      charts.openshift.io/testedOpenShiftVersion: '4.11'
+    apiVersion: v2
+    appVersion: 0.1.0
+    description: A Helm chart for MySQL Service Endpoint Definition (SED)
+    digest: f18fab48033edf23ee2af61c45833404a4e822996e9e98d5e35fef3d59cd46b9
+    kubeVersion: '>=1.20.0'
+    name: mysql-sed
+    type: application
+    urls:
+    - https://github.com/Kartikey-star/development/releases/download/redhat-mysql-sed-0.1.8/redhat-mysql-sed-0.1.8.tgz
+    version: 0.1.8
+generated: '2022-10-28T05:24:41.428488+00:00'
