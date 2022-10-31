@@ -1,0 +1,86 @@
+apiversion: v1
+kind: verify-report
+metadata:
+    tool:
+        verifier-version: 1.0.0
+        profile:
+            VendorType: redhat
+            version: v1.1
+        chart-uri: /.kube/mychart-0.1.0.tgz
+        digests:
+            chart: sha256:a595375240802b5482a0884d810e2481656b287752e9d7680efc368c9328a2f9
+            package: 391ee858bd2a8033d65c1bd075ef62525ee6bcdec82266bdb117c77598b3e74b
+        lastCertifiedTimestamp: "2022-10-31T02:59:31.197373+00:00"
+        testedOpenShiftVersion: N/A
+        supportedOpenShiftVersions: N/A
+        providerControlledDelivery: false
+    chart:
+        name: mychart
+        home: ""
+        sources: []
+        version: 0.1.0
+        description: A Helm chart for Kubernetes
+        keywords: []
+        maintainers: []
+        icon: ""
+        apiversion: v2
+        condition: ""
+        tags: ""
+        appversion: 1.16.0
+        deprecated: false
+        annotations: {}
+        kubeversion: ""
+        dependencies: []
+        type: application
+    chart-overrides: ""
+results:
+    - check: v1.0/not-contains-crds
+      type: Mandatory
+      outcome: PASS
+      reason: Chart does not contain CRDs
+    - check: v1.0/helm-lint
+      type: Mandatory
+      outcome: PASS
+      reason: Helm lint successful
+    - check: v1.0/images-are-certified
+      type: Mandatory
+      outcome: FAIL
+      reason: |-
+        Image is not Red Hat certified : busybox : Respository not found: busybox
+        Image is not Red Hat certified : nginx:1.16.0 : Respository not found: nginx
+    - check: v1.0/required-annotations-present
+      type: Mandatory
+      outcome: FAIL
+      reason: 'Missing required annotations: [charts.openshift.io/name]'
+    - check: v1.0/contains-test
+      type: Mandatory
+      outcome: PASS
+      reason: Chart test files exist
+    - check: v1.0/not-contain-csi-objects
+      type: Mandatory
+      outcome: PASS
+      reason: CSI objects do not exist
+    - check: v1.0/has-readme
+      type: Mandatory
+      outcome: FAIL
+      reason: Chart does not have a README
+    - check: v1.0/is-helm-v3
+      type: Mandatory
+      outcome: PASS
+      reason: API version is V2, used in Helm 3
+    - check: v1.0/chart-testing
+      type: Mandatory
+      outcome: FAIL
+      reason: 'Chart Install failure: Kubernetes cluster unreachable: Get "https://api.daily-4.11-102801.dev.openshiftappsvc.org:6443/version": dial tcp: lookup api.daily-4.11-102801.dev.openshiftappsvc.org on 192.168.65.5:53: no such host'
+    - check: v1.0/contains-values
+      type: Mandatory
+      outcome: PASS
+      reason: Values file exist
+    - check: v1.1/has-kubeversion
+      type: Mandatory
+      outcome: FAIL
+      reason: Kubernetes version is not specified
+    - check: v1.0/contains-values-schema
+      type: Mandatory
+      outcome: FAIL
+      reason: Values schema file does not exist
