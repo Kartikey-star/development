@@ -5,5 +5,5 @@ publicPgpKey: null
 users:
 - githubUsername: Kartikey-star
 vendor:
-  label: redhat
-  name: Red Hat
+  label: Company
+  name: Company
