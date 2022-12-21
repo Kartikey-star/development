@@ -3,3 +3,6 @@ chart:
 publicPgpKey: null
 users:
 - githubUsername: Kartikey-star
+vendor:
+  label: myCompany
+  name: myCompany India Pvt. Ltd
