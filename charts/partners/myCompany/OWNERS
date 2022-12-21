@@ -1,5 +1,5 @@
 chart:
-  name: mychart
+  name: MyChart
 publicPgpKey: null
 users:
 - githubUsername: Kartikey-star
