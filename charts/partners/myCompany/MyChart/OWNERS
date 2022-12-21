@@ -1,8 +1,0 @@
-chart:
-  name: MyChart
-publicPgpKey: null
-users:
-- githubUsername: Kartikey-star
-vendor:
-  label: myCompany
-  name: myCompany
