@@ -1,0 +1,5 @@
+chart:
+  name: mychart
+publicPgpKey: null
+users:
+- githubUsername: Kartikey-star
